@@ -22,8 +22,8 @@ This background script periodically collects system metrics and checks for inter
     - Internet connectivity check (Ping 8.8.8.8)
 
 ## Features
-- **Structured Logging**: Logs are saved to `system_monitor.log` with timestamps.
-- **Log Rotation**: Automatic rotation to prevent disk space exhaustion.
+- **Structured Logging**: Active logs are saved to `logs/system_monitor.log`.
+- **Log Rotation**: automatic daily rotation. At midnight, the current log is renamed (e.g., `system_monitor.log.2023-10-27`) and a new file is started.
 - **Alerting**: Captures top processes by CPU/Memory when usage exceeds 90%.
 
 ## Prerequisites
