@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  system-monitor:
+    build: .
+    container_name: system_monitor
+    restart: unless-stopped
+    # specific privileges to monitor the host
+    pid: "host"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
